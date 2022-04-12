@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.navbar > * {
+    text-decoration: none;
+    color: rgb(25, 175, 175)
+}
+
+.navbar  > *:hover {
+    color: teal
+}
