@@ -12,7 +12,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: 'Mukta', sans-serif;
-  padding:1rem 2rem 1rem 2rem;
+  /* padding:1rem 2rem 1rem 2rem; */
   font-size:1.25rem;
   letter-spacing: 0.15rem;
   background-color:antiquewhite;
