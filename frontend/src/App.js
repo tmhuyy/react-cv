@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Forms/Profile/Profile';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <NavBar/>
@@ -20,7 +20,7 @@ function App() {
         <Route path="/how-to-use" element=""></Route>
         <Route path="/register" element={ <Register/> }></Route>
       </Routes> */}
-      {/* <Footer/> */}
+      <Footer/>
     </Router>
   );
 }

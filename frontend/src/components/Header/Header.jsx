@@ -1,10 +1,6 @@
-import "./header.css";
+// import "./header.css";
 const Header = () => {
-    return (
-        <header className="header-container">
-            NERD CV
-        </header>
-     );
-}
- 
+  return <h1 class="text-3xl underline text-teal-700">Hello world!</h1>;
+};
+
 export default Header;
