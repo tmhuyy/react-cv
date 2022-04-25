@@ -9,9 +9,9 @@ import Profile from "./components/Forms/Profile/Profile";
 
 const App = () => {
   return (
-    <div className="h-screen px-4 py-12 bg-gradient-to-t from-purple-900">
+    <div className="font-sora h-screen px-4 py-8 bg-gradient-to-b from-purple-900 to-purple-700 text-white">
       <Router>
-        {/* <NavBar/> */}
+        <NavBar/>
         <Header />
         {/* <Routes>
         <Route path="/" element={<Personal />}></Route>

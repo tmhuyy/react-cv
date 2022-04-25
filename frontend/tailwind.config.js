@@ -1,6 +1,9 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx,js}"],
   theme: {
+    fontFamily: {
+      sora: ['Sora'],
+    },
     extend: {
       colors: {
         "purple-200": "#DAC7FC",
