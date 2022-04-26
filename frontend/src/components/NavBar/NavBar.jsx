@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { RiSunFoggyFill } from "react-icons/ri";
 import { SiSnowflake } from "react-icons/si";
 import { CgClose } from "react-icons/cg";
+import { RiMoonFoggyFill } from "react-icons/ri";
 import { useState } from "react";
 import useDarkMode from "../../useDarkMode";
 // const NavBar = () => {
@@ -29,18 +30,28 @@ const NavBar = () => {
     })
   }
   const darkModeHandler = () => {
-
+    toggleDarkMode(!isDarkMode)
   }
+  console.log(isDarkMode)
   return (
     <nav className="flex items-center">
       <div className="flex items-center">
         <div className="text-20 font-bold mr-2">Snowy CV</div>
-        <RiSunFoggyFill
-          size={"24px"}
-          color="#FCD900"
-          className="cursor-pointer"
-          onClick={darkModeHandler}
-        />
+        {isDarkMode ? (
+          <RiSunFoggyFill
+            size={"24px"}
+            color="#FCD900"
+            className="cursor-pointer"
+            onClick={darkModeHandler}
+          />
+        ) : (
+          <RiMoonFoggyFill
+            size={"24px"}
+            color="#FCD900"
+            className="cursor-pointer"
+            onClick={darkModeHandler}
+          />
+        )}
       </div>
       <ul className="ml-auto text-16 font-semibold">
         {isOpen ? (

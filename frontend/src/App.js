@@ -10,7 +10,7 @@ import ContentLP from "./components/ContentLP/ContentLP";
 
 const App = () => {
   return (
-    <div className="font-sora overflow-y-auto overflow-x-hidden h-screen px-4 py-8 bg-gradient-to-b from-blue-900 to-blue-700 text-white">
+    <div className="font-sora overflow-y-auto overflow-x-hidden h-screen px-4 py-8 bg-gradient-to-b from-white to-pink-500 dark:from-blue-900 dark:to-blue-700 text-black dark:text-white">
       <NavBar />
       <Header />
       <ContentLP/>

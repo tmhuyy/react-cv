@@ -2,7 +2,7 @@ import checkIconMobile from "../../assets/mobile/checkpoint.svg";
 
 const ContentLP = () => {
     return ( 
-        <div className="text-13 flex flex-col w-[100%] font-semibold">
+        <div className="text-13 flex flex-col w-[100%] font-bold">
             <div className="landing-content">
                 <img src={checkIconMobile} alt="" />
                 <p>Resume writing made easy in minutes</p>

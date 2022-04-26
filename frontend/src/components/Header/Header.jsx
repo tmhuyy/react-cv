@@ -5,7 +5,7 @@ const Header = () => {
     <section className="text-36 mt-14 font-extrabold">
       <div className="text-center">
         <p className="">
-          Have It <span className="text-blue-200">Your</span> Way
+          Have It <span className="text-blue-500 dark:text-blue-200">Your</span> Way
         </p>
         <button className="button">Start</button>
       </div>
