@@ -10,10 +10,9 @@ import Profile from "./components/Forms/Profile/Profile";
 const App = () => {
   return (
     <div className="font-sora h-screen px-4 py-8 bg-gradient-to-b from-purple-900 to-purple-700 text-white">
-      <Router>
-        <NavBar/>
-        <Header />
-        {/* <Routes>
+      <NavBar />
+      <Header />
+      {/* <Routes>
         <Route path="/" element={<Personal />}></Route>
         <Route path="/profile" element={ <Profile/> }></Route>
         <Route path="/education" element={ }></Route>
@@ -21,8 +20,7 @@ const App = () => {
         <Route path="/how-to-use" element=""></Route>
         <Route path="/register" element={ <Register/> }></Route>
       </Routes> */}
-        {/* <Footer/> */}
-      </Router>
+      {/* <Footer/> */}
     </div>
   );
 };

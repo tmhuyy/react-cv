@@ -1,6 +1,7 @@
 module.exports = {
-  content: ["./src/**/*.{html,jsx,js}"],
-  theme: {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],  theme: {
     fontFamily: {
       sora: ['Sora'],
     },
@@ -23,7 +24,7 @@ module.exports = {
         32: "32px",
         36: "36px",
         48: "48px",
-      }
+      },
     },
   },
   plugins: [],
