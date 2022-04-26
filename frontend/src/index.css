@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .landing-content{
+        @apply mb-[51px] flex gap-8 ml-[70px] mr-[29px] items-center;
+    }
+    .button {
+        @apply text-20 px-6 py-[6px] font-bold mt-[27px] bg-blue-500 rounded-md hover:bg-pink-500 transition-all duration-300 cursor-pointer hover:shadow-md;
+    }
+}

@@ -1,18 +1,17 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],  theme: {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
     fontFamily: {
-      sora: ['Sora'],
+      sora: ["Sora"],
     },
     extend: {
       colors: {
-        "purple-200": "#DAC7FC",
-        "purple-300": "#CAACFF",
-        "purple-500": "#6B49CD",
-        "purple-700": "#5D0096",
-        "purple-900": "#210035",
-        "pink-500": "#AD26FF",
+        "blue-200": "#84DFFF",
+        "blue-300": "#3DB5FF",
+        "blue-500": "#3282B8",
+        "blue-700": "#0C3C78",
+        "blue-900": "#0A043C",
+        "pink-500": "#46C7FF",
       },
       fontSize: {
         13: "13px",
@@ -25,7 +24,10 @@ module.exports = {
         36: "36px",
         48: "48px",
       },
+      boxShadow: {
+        md: "10px 10px 16px rgba(0,0,0,0.3), -4px -4px 12px 0 rgba(255,255,255,0.3)",
+      },
     },
   },
   plugins: [],
-}
+};

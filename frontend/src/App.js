@@ -6,12 +6,14 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import Profile from "./components/Forms/Profile/Profile";
+import ContentLP from "./components/ContentLP/ContentLP";
 
 const App = () => {
   return (
-    <div className="font-sora overflow-y-auto overflow-x-hidden h-screen px-4 py-8 bg-gradient-to-b from-purple-900 to-purple-700 text-white">
+    <div className="font-sora overflow-y-auto overflow-x-hidden h-screen px-4 py-8 bg-gradient-to-b from-blue-900 to-blue-700 text-white">
       <NavBar />
       <Header />
+      <ContentLP/>
       {/* <Routes>
         <Route path="/" element={<Personal />}></Route>
         <Route path="/profile" element={ <Profile/> }></Route>
