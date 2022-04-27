@@ -36,7 +36,7 @@ const NavBar = () => {
   return (
     <nav className="flex items-center">
       <div className="flex items-center">
-        <div className="text-20 font-bold mr-2">Snowy CV</div>
+        <div className="text-20 font-bold mr-2">THE C.E.V</div>
         {isDarkMode ? (
           <RiSunFoggyFill
             size={"24px"}
