@@ -29,6 +29,16 @@ const authorController = {
         } catch (err) {
             res.status(500).json(err);
         }
+    },
+    // DELETE AN AUTHOR
+    deleteAuthor: async(req, res) => {
+        try {
+            const authorId = req.params.id;
+            const result = await Author.findByIdAndDelete(authorId);
+            res.status(200).json(result);
+        } catch (err) {
+            res.status(500).json(err);
+        }
     }
 }
 module.exports = authorController
