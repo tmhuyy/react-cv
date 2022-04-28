@@ -5,13 +5,6 @@ import { CgClose } from "react-icons/cg";
 import { RiMoonFoggyFill } from "react-icons/ri";
 import { useState } from "react";
 import useDarkMode from "../../useDarkMode";
-// const NavBar = () => {
-//     return (
-//         <nav className="navbar">
-//             {/* <Link to="/how-to-use">Document</Link> */}
-//         </nav>
-//      );
-// }
 
 const NavBar = (props) => {
   const { isMobile } = props;
@@ -36,7 +29,7 @@ const NavBar = (props) => {
   return (
     <nav className="flex items-center">
       <div className="flex items-center">
-        <div className="text-20 font-bold mr-2 md:text-24">THE C.E.V</div>
+        <Link to="/" className="text-20 font-bold mr-2 md:text-24 text-black dark:text-white">THE C.E.V</Link>
         {isDarkMode ? (
           <RiSunFoggyFill
             size={"24px"}
@@ -69,8 +62,8 @@ const NavBar = (props) => {
         ) : (
           <>
             <Link to="/" className="btn-hover text-white">Home</Link>
-            <Link to="" className="btn-hover text-white">Features</Link>
-            <Link to="" className="btn-hover text-white">Document </Link>
+            <Link to="/create" className="btn-hover text-white">Create CV</Link>
+            <Link to="/document" className="btn-hover text-white">Document </Link>
             <a href="https://github.com/tmhuyy/react-cv" className="btn-hover text-white">Contact</a>
                 
           </>
@@ -79,9 +72,9 @@ const NavBar = (props) => {
 
         {isOpen && (
           <section className="flex flex-col	items-center absolute right-8 bg-white p-8 z-1 text-13" onClick={itemHandler}>
-            <Link to="/as" className="cursor-pointer text-black" onClick={itemHandler}>Home</Link>
-            <Link to="" className="cursor-pointer text-black" onClick={itemHandler}>Feature</Link>
-            <Link to="" className="cursor-pointer text-black" onClick={itemHandler}>Document</Link>
+            <Link to="/" className="cursor-pointer text-black" onClick={itemHandler}>Home</Link>
+            <Link to="/create" className="cursor-pointer text-black" onClick={itemHandler}>Create CV</Link>
+            <Link to="/document" className="cursor-pointer text-black" onClick={itemHandler}>Document</Link>
             <a href="https://github.com/tmhuyy/react-cv" className="cursor-pointer text-black" onClick={itemHandler}>Contact</a>
           </section>
         )}

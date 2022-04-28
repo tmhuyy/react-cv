@@ -2,14 +2,10 @@
 import { useEffect, useState } from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Personal from "./components/Forms/PersonalDetail/PersonalDetail";
-import Register from "./components/Register/Register";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
-import Profile from "./components/Forms/Profile/Profile";
-import ContentLP from "./components/ContentLP/ContentLP";
 import HomePage from "./components/HomePage/HomePage";
+import CreateCv from "./components/CreateCv/CreateCv";
+import Document from "./components/Document/Document";
 
 const App = () => {
   const [windowSize, setWindowSize] = useState({
@@ -44,7 +40,10 @@ const App = () => {
           <NavBar isMobile={isMobile}/>
           <div className="page-container">
             <Routes>
-              <Route path="/" element={<HomePage/>}></Route>
+              <Route path="/" element={<HomePage />}></Route>
+              <Route path="/create" element={<CreateCv />}></Route>
+              <Route path="/document" element={<Document />}></Route>
+          
             </Routes>
           </div>
       </Router>
