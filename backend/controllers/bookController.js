@@ -24,8 +24,17 @@ const bookController = {
         } catch (err) {
             res.status(500).json(err);
         }
-    }
+    },
     //  GET A BOOK
+    getABook: async (req, res) => {
+        try {
+            const bookId = req.params.id;
+            const book = await Book.findById(bookId);
+            res.status(200).json(book);
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    }
 };
 
 module.exports = bookController;
