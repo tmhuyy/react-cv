@@ -33,7 +33,6 @@ const NavBar = (props) => {
   const darkModeHandler = () => {
     toggleDarkMode(!isDarkMode)
   }
-  console.log(isDarkMode)
   return (
     <nav className="flex items-center">
       <div className="flex items-center">
@@ -69,19 +68,21 @@ const NavBar = (props) => {
           />
         ) : (
           <>
-            <li className="btn-hover">Features</li>
-            <li className="btn-hover">Menu </li>
-            <li className="btn-hover">Our Story</li>
-            <li className="btn-hover">Contact</li>
+            <Link to="/" className="btn-hover text-white">Home</Link>
+            <Link to="" className="btn-hover text-white">Features</Link>
+            <Link to="" className="btn-hover text-white">Document </Link>
+            <a href="https://github.com/tmhuyy/react-cv" className="btn-hover text-white">Contact</a>
+                
           </>
         )} 
         
 
         {isOpen && (
-          <section className="flex flex-col	items-center absolute right-8 bg-white p-8 z-1 text-black text-13" onClick={itemHandler}>
-            <li className="cursor-pointer" onClick={itemHandler}>Feature</li>
-            <li className="cursor-pointer" onClick={itemHandler}>Document</li>
-            <li className="cursor-pointer" onClick={itemHandler}>Contact</li>
+          <section className="flex flex-col	items-center absolute right-8 bg-white p-8 z-1 text-13" onClick={itemHandler}>
+            <Link to="/as" className="cursor-pointer text-black" onClick={itemHandler}>Home</Link>
+            <Link to="" className="cursor-pointer text-black" onClick={itemHandler}>Feature</Link>
+            <Link to="" className="cursor-pointer text-black" onClick={itemHandler}>Document</Link>
+            <a href="https://github.com/tmhuyy/react-cv" className="cursor-pointer text-black" onClick={itemHandler}>Contact</a>
           </section>
         )}
       </ul>

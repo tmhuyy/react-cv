@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import Profile from "./components/Forms/Profile/Profile";
 import ContentLP from "./components/ContentLP/ContentLP";
+import HomePage from "./components/HomePage/HomePage";
 
 const App = () => {
   const [windowSize, setWindowSize] = useState({
@@ -39,18 +40,14 @@ const App = () => {
   }, [windowSize]);
   return (
     <div className="font-sora overflow-y-auto overflow-x-hidden h-screen px-4 py-8 bg-gradient-to-b from-white to-pink-500 dark:from-blue-900 dark:to-blue-700 text-black dark:text-white md:px-10">
-      <NavBar isMobile={isMobile}/>
-      <Header />
-      <ContentLP/>
-      {/* <Routes>
-        <Route path="/" element={<Personal />}></Route>
-        <Route path="/profile" element={ <Profile/> }></Route>
-        <Route path="/education" element={ }></Route>
-        <Route path="/" element={ }></Route> 
-        <Route path="/how-to-use" element=""></Route>
-        <Route path="/register" element={ <Register/> }></Route>
-      </Routes> */}
-      {/* <Footer/> */}
+      <Router>
+          <NavBar isMobile={isMobile}/>
+          <div className="page-container">
+            <Routes>
+              <Route path="/" element={<HomePage/>}></Route>
+            </Routes>
+          </div>
+      </Router>
     </div>
   );
 };

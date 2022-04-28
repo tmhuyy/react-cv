@@ -9,7 +9,7 @@ const Header = () => {
         </p>
         <button className="button md:text-26">Start</button>
       </div>
-      <div className="md:absolute md:right-[5rem]">
+      <div className="md:absolute md:left-[5%] md:top-[8%] ">
         <img src={ Card } alt="" className="m-auto h-[450px] w-[343px]"/>
       </div>
     </section>
