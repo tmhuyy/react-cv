@@ -44,6 +44,18 @@ const bookController = {
         } catch (err) {
             res.status(500).json(err);
         }
+    },
+    // DELETE A BOOK
+    deleteBook: async (req, res) => {
+        try {
+            const bookId = req.params.id;
+            const findBook = await Book.findById(bookId);
+            await Book.findByIdAndDelete(bookId);
+            await Author.findByIdAndUpdate(findBook.author, { $pull: { books: bookId } });
+            res.status(200).json("Deleted successfully")
+        } catch (err) {
+            res.status(500).json(err);
+        }
     }
 };
 

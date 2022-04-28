@@ -12,4 +12,7 @@ router.get("/:id", bookController.getABook)
 
 // UPDATE A BOOK
 router.post("/:id", bookController.updateABook);
+
+// DELETE A BOOK
+router.delete("/:id", bookController.deleteBook);
 module.exports = router;
