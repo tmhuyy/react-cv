@@ -11,6 +11,9 @@ router.get("/", authorController.getAllAuthor);
 // GET AN AUTHOR
 router.get("/:id", authorController.getAnAuthor);
 
+// UPDATE AN AUTHOR
+router.post("/:id", authorController.updateAnAuthor);
+
 // DELETE AN AUTHOR 
 router.delete("/:id", authorController.deleteAuthor);
 

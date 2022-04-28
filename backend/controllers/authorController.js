@@ -30,6 +30,16 @@ const authorController = {
             res.status(500).json(err);
         }
     },
+    // UPDATE AN AUTHOR 
+    updateAnAuthor: async (req,res) => { 
+        try {
+            const authorId = req.params.id;
+            const updatedAuthor = await Author.findByIdAndUpdate(authorId, req.body, { new: true });
+            res.status(200).json(updatedAuthor);
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
     // DELETE AN AUTHOR
     deleteAuthor: async(req, res) => {
         try {
