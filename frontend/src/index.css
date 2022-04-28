@@ -9,4 +9,7 @@
     .button {
         @apply text-20 px-6 py-[6px] font-bold mt-[27px] bg-blue-500 rounded-md hover:bg-pink-500 transition-all duration-300 cursor-pointer hover:shadow-md;
     }
+    .btn-hover{
+        @apply hover:text-blue-500 transition-all duration-200 cursor-pointer
+    }
 }
