@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const authorSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: [true, "Author must have a name"]
     },
     year: {
         type: Number,
-        required: true
+        required: [true, "Author must have birth year"]
     },
     books: [
         {
