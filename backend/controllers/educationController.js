@@ -11,6 +11,15 @@ const educationController = {
         } catch(err) {
             res.status(500).json(err); 
         }
+    },
+    // GET ALL EDUCATIONS
+    getAllEducations: async (req, res) => {
+        try {
+            const educations = await Education.find().populate("user");
+            res.status(200).json(educations);
+        } catch (err) {
+            res.status(500).json(err);
+        }
     }
 };
 
