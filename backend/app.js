@@ -5,6 +5,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const app = express();
+dotenv.config();
 const data = [
   { name: "Huy", age: 19 },
   { name: "Tu", age: 20 },
@@ -12,10 +13,11 @@ const data = [
 app.use(cors());
 app.use(morgan("common"));
 app.use(bodyParser.json());
-app.get("/", (req, res) => {
-  res.status(200).json(data);
-});
-
-app.listen(3000, () => {
+// Connect mongodb cloud db
+mongoose.connect(process.env.MONGODB_URL)
+  .then(() => console.log("CONNECTION IS OPEN"))
+  .catch((err) => console.log(err))
+  
+app.listen(8080, () => {
   console.log("SERVER IS RUNNING !!");
 });
