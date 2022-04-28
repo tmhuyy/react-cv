@@ -1,9 +1,15 @@
 const { Author, Book } = require("../model/model");
-
+// keep track all author controller
 const authorController = {
     // ADD AUTHOR
     addAuthor: async (req, res) => {
-        res.status(200).json(req.body)
+        try {
+            const newAuthor = new Author(req.body);
+            const savedAuthor = await newAuthor.save();
+            res.status(200).json(savedAuthor);
+        } catch (err) {
+            res.status(500).json(err)
+        }
     },
 }
 module.exports = authorController
