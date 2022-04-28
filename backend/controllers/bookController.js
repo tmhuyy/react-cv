@@ -2,6 +2,7 @@ const { Author, Book } = require("../model/model");
 const mongoose = require("mongoose");
 
 const bookController = {
+    // ADD BOOK
     addBook: async (req, res) => {
         try {
             const newBook = new Book(req.body);
@@ -14,7 +15,17 @@ const bookController = {
         } catch (err) {
             res.status(500).json(err)
         }
+    },
+    //  GET ALL BOOK
+    getAllBook: async (req, res) => {
+        try {
+            const books = await Book.find();
+            res.status(200).json(books);
+        } catch (err) {
+            res.status(500).json(err);
+        }
     }
+    //  GET A BOOK
 };
 
 module.exports = bookController;
