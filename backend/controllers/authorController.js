@@ -24,7 +24,7 @@ const authorController = {
     getAnAuthor: async (req, res) => {
         try {
             const authorId = req.params.id;
-            const author = await Author.findById(authorId);
+            const author = await Author.findById(authorId).populate("books");
             res.status(200).json(author)
         } catch (err) {
             res.status(500).json(err);

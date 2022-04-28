@@ -29,7 +29,7 @@ const bookController = {
     getABook: async (req, res) => {
         try {
             const bookId = req.params.id;
-            const book = await Book.findById(bookId);
+            const book = await Book.findById(bookId).populate("author");
             res.status(200).json(book);
         } catch (err) {
             res.status(500).json(err);
