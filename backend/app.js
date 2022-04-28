@@ -6,8 +6,6 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 dotenv.config();
 const app = express();
-const authorRoute = require("./routes/author");
-const bookRoute = require("./routes/book")
 
 // CONNECT DATABASE
 mongoose.connect(process.env.MONGODB_URL)
@@ -19,9 +17,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json());
 
 // ROUTES
-app.use("/v1/author", authorRoute)
-app.use("/v1/book", bookRoute)
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
   console.log("SERVER IS RUNNING !!");
 });
