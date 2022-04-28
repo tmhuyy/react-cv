@@ -80,8 +80,8 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
     phoneNumber: {
-        type: Number,
-        min: 10,
+        type: String,
+        minLength: 10,
     },
     careerObjective: {
         type: String,
@@ -115,10 +115,4 @@ const Education = mongoose.model("Education", educationSchema);
 const Project = mongoose.model("Project", projectSchema);
 const Skill = mongoose.model("Skill", skillSchema);
 const User = mongoose.model("User", userSchema);
-module.exports = {
-    Link,
-    Education,
-    Project,
-    Skill,
-    User
-};
+module.exports = { Link, Education, Project, Skill, User };
