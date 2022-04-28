@@ -10,4 +10,6 @@ router.get("/", bookController.getAllBook)
 // GET A BOOK
 router.get("/:id", bookController.getABook)
 
+// UPDATE A BOOK
+router.post("/:id", bookController.updateABook);
 module.exports = router;

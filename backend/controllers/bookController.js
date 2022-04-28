@@ -34,6 +34,16 @@ const bookController = {
         } catch (err) {
             res.status(500).json(err);
         }
+    },
+    // UPDATE A BOOK
+    updateABook: async (req, res) => {
+        try {
+            const bookId = req.params.id;
+            const updatedBook = await Book.findByIdAndUpdate(bookId, req.body, { new: true });
+            res.status(200).json(updatedBook)
+        } catch (err) {
+            res.status(500).json(err);
+        }
     }
 };
 
