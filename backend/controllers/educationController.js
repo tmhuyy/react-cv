@@ -6,6 +6,7 @@ const educationController = {
         try {
             const newEducation = new Education(req.body);
             const savedEducation = await newEducation.save();
+            await User.findByIdAndUpdate(req.body.user, { $push: { educations: savedEducation._id } });
             res.status(200).json(savedEducation);
         } catch(err) {
             res.status(500).json(err); 
