@@ -61,10 +61,10 @@ const NavBar = (props) => {
           />
         ) : (
           <>
-            <Link to="/" className="btn-hover text-white">Home</Link>
-            <Link to="/create" className="btn-hover text-white">Create CV</Link>
-            <Link to="/document" className="btn-hover text-white">Document </Link>
-            <a href="https://github.com/tmhuyy/react-cv" className="btn-hover text-white">Contact</a>
+            <Link to="/" className="btn-hover dark:text-white text-dark">Home</Link>
+            <Link to="/create" className="btn-hover dark:text-white text-dark">Create CV</Link>
+            <Link to="/document" className="btn-hover dark:text-white text-dark">Document </Link>
+            <a href="https://github.com/tmhuyy/react-cv" className="btn-hover dark:text-white text-dark">Contact</a>
                 
           </>
         )} 
