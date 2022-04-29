@@ -7,9 +7,15 @@
         @apply mb-[51px] flex gap-8 ml-[70px] mr-[29px] items-center;
     }
     .button {
-        @apply text-20 px-6 py-[6px] font-bold mt-[27px] bg-blue-500 rounded-md hover:bg-pink-500 transition-all duration-300 cursor-pointer hover:shadow-md;
+        @apply text-16 px-6 py-[6px] font-bold mt-[27px] bg-blue-500 rounded-md hover:bg-pink-500 transition-all duration-300 cursor-pointer hover:shadow-md;
     }
     .btn-hover{
         @apply hover:text-blue-500 transition-all duration-200 cursor-pointer
+    }
+    .input{
+        @apply text-[14px] text-black block w-full focus:outline-none rounded-md h-10 pl-2
+    }
+    .errorMsg {
+        @apply text-13 text-red-500 dark:text-red-400 
     }
 }
