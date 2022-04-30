@@ -3,7 +3,7 @@ import User from "../Forms/User/User";
 import Education from "../Forms/Education/Education";
 import Project from "../Forms/Project/Project";
 import Link from "../Forms/Link/Link";
-
+import axios from "axios";
 const CreateCv = () => {
     const [page, setPage] = useState(0);
     const [isFinish, setIsFinish] = useState(false);
@@ -35,10 +35,11 @@ const CreateCv = () => {
         setIsValid(entered)
     }
     const onUserDataHandler = (userData) => {
-        // axios.post("http://localhost:8080/create", userData)
+        axios.post("http://localhost:8080/create-user", userData)
         console.log(userData)
     }
     const onEducationDataHandler = (educationData) => {
+        axios.post("http://localhost:8080/create-edu", educationData)
         console.log(educationData)
     }
     const onProjectDataHandler = (projectData) => {

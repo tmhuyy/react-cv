@@ -5,8 +5,12 @@ const educationController = {
     addEducation: async (req, res) => {
         try {
             const newEducation = new Education(req.body);
+            const newestUser = await User.find().sort({ _id: -1 }).limit(1);
+
+            await User.findByIdAndUpdate(newestUser._id, { $push: { educations: savedEducation._id } });
+
             const savedEducation = await newEducation.save();
-            await User.findByIdAndUpdate(req.body.user, { $push: { educations: savedEducation._id } });
+
             res.status(200).json(savedEducation);
         } catch(err) {
             res.status(500).json(err); 
