@@ -62,7 +62,6 @@ const User = (props) => {
                         value={formik.values.careerObjective} placeholder="Your Career Objective"
                         onChange={formik.handleChange} ></textarea>
                     <p className="errorMsg">{ formik.errors.careerObjective }</p>
-
                 </div>
                 <button type="submit" className="button mb-4">Send First</button>
             </form>
