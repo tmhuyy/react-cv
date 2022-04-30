@@ -58,6 +58,9 @@ const projectSchema = new mongoose.Schema({
 });
 
 const skillSchema = new mongoose.Schema({
+    name: {
+        type: String
+    },
     details: {
         type: String
     },
@@ -104,10 +107,12 @@ const userSchema = new mongoose.Schema({
             ref: "Project"
         }
     ],
-    skills: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Skill"
-    }
+    skills: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Skill"
+        }
+    ]
 })
 
 const Link = mongoose.model("Link", linkSchema);

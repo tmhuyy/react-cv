@@ -51,7 +51,7 @@ const User = (props) => {
                 </div>
                 <div className="">
                     <label htmlFor="co" className="cursor-pointer">Career Objective</label>
-                    <input type="text" name="co" id="co" className="input" value={ careerObjective } placeholder="Your Career Objective"onChange={(e) => setCareerObjective(e.target.value)} ></input>
+                    <textarea type="text" name="co" id="co" className="input" value={ careerObjective } placeholder="Your Career Objective"onChange={(e) => setCareerObjective(e.target.value)} ></textarea>
                     <p className="errorMsg">error</p>
 
                 </div>
