@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
@@ -41,7 +42,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://localhost:8080",
   "devDependencies": {
     "autoprefixer": "^10.4.5",
     "postcss": "^8.4.12",

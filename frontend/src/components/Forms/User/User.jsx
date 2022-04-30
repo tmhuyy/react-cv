@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 const User = (props) => {
     const { onUserData } = props;
 
@@ -26,7 +25,7 @@ const User = (props) => {
     }
     return ( 
         <>
-            <form action="/" className="mx-4" onSubmit={ submitHandler }>
+            <form className="mx-4" onSubmit={ submitHandler }>
                 <div className="mb-4">
                     <label htmlFor="f-name" className="cursor-pointer">First Name</label>
                     <input type="text" name="f-name" id="f-name" className="input" value={ firstName } placeholder="First Name" onChange={(e) => setFristName(e.target.value)}/>

@@ -3,6 +3,7 @@ import User from "../Forms/User/User";
 import Education from "../Forms/Education/Education";
 import Project from "../Forms/Project/Project";
 import Link from "../Forms/Link/Link";
+import axios from "axios";
 
 const CreateCv = () => {
     const [page, setPage] = useState(0);
@@ -19,6 +20,7 @@ const CreateCv = () => {
         } setPage((previous) => previous + 1)
     }
     const onUserDataHandler = (userData) => {
+        axios.post("http://localhost:8080/create", userData)
         console.log(userData)
     }
     const onEducationDataHandler = (educationData) => {

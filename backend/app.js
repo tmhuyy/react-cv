@@ -20,8 +20,8 @@ app.use(morgan("common"));
 app.use(bodyParser.json({limit: "50mb"}));
 
 // ROUTES
-app.use("/v1/user", userRoute);
-app.use("/v1/education", educationRoute);
+app.use("/", userRoute);
+app.use("/", educationRoute);
 
 app.listen(process.env.PORT, () => {
   console.log("SERVER IS RUNNING !!");
