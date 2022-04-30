@@ -8,19 +8,35 @@ import axios from "axios";
 const CreateCv = () => {
     const [page, setPage] = useState(0);
     const [isFinish, setIsFinish] = useState(false);
+    const [isValid, setIsValid] = useState();
     const formTitles = ["Personal Detail", "Education", "Project", "Link"];
     const prevHandler = () => {
-        if (page === 0) return;
-        setIsFinish(false)
-        setPage((previous) => previous - 1)
-    };
-    const nextHandler = () => {
-        if (page === formTitles.length - 1) {
+        if (page === 0 && isValid === false) {
             return;
-        } setPage((previous) => previous + 1)
+        }
+        else if (isValid === true) {
+            console.log("valid");
+            setIsFinish(false);
+            setPage((previous) => previous - 1);
+        }
+    };
+    console.log(isValid)
+    const nextHandler = () => {
+        setIsValid(false)
+
+        if ((page < formTitles.length - 1) && (isValid === true)) {
+            setIsValid(false);
+            return setPage((previous) => previous + 1);
+        }
+        else if ((page === formTitles.length - 1) && isValid === false) {
+            return;
+        }
+    }
+    const onValidHandler = (entered) => {
+        setIsValid(entered)
     }
     const onUserDataHandler = (userData) => {
-        axios.post("http://localhost:8080/create", userData)
+        // axios.post("http://localhost:8080/create", userData)
         console.log(userData)
     }
     const onEducationDataHandler = (educationData) => {
@@ -33,7 +49,7 @@ const CreateCv = () => {
         console.log(linkData)
     }
     const pageDisplay = () => {
-        if (page === 0) return <User onUserData={onUserDataHandler}/>
+        if (page === 0) return <User onUserData={onUserDataHandler} onValid={onValidHandler}/>
         else if (page === 1) return <Education />
         else if (page === 2) return <Project/>
         else if (page === 3) return <Link/>
@@ -50,6 +66,7 @@ const CreateCv = () => {
                 {/* <User/> */}
                 <div className="mb-4">
                     <h1>{formTitles[page]}</h1>
+                    { isValid === false && <h2 className="text-13 text-red-600">Make sure every fields is set</h2>}
                 </div>
                 <div className="body">{ pageDisplay()}</div>
                 <button className="button disabled:opacity-50 diabled:" onClick={prevHandler} disabled={page === 0 }>Prev</button>
