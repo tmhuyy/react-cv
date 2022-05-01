@@ -9,6 +9,17 @@ const CreateCv = () => {
     const [isFinish, setIsFinish] = useState(false);
     const [isValid, setIsValid] = useState();
     const formTitles = ["Personal Detail", "Education", "Project", "Link"];
+    const [newUser, setNewUser] = useState({
+        firstName: "",
+        lastName: "",
+        address: "",
+        phoneNumber: "",
+        careerObjective: "",
+        educations: [],
+        projects: [],
+        skills: [],
+        links: []
+    })
     const prevHandler = () => {
         if (page === 0 && isValid === false) {
             return;
@@ -35,11 +46,11 @@ const CreateCv = () => {
         setIsValid(entered)
     }
     const onUserDataHandler = (userData) => {
-        axios.post("http://localhost:8080/create-user", userData)
+        // axios.post("http://localhost:8080/v1/user", userData)
         console.log(userData)
     }
     const onEducationDataHandler = (educationData) => {
-        axios.post("http://localhost:8080/create-edu", educationData)
+        // axios.post("http://localhost:8080/v1/education", educationData)
         console.log(educationData)
     }
     const onProjectDataHandler = (projectData) => {
@@ -51,8 +62,8 @@ const CreateCv = () => {
     const pageDisplay = () => {
         if (page === 0) return <User onUserData={onUserDataHandler} onValid={onValidHandler}/>
         else if (page === 1) return <Education onEducationData={onEducationDataHandler} onValid={onValidHandler}/>
-        else if (page === 2) return <Project/>
-        else if (page === 3) return <Link/>
+        else if (page === 2) return <Project onProjectData={onProjectDataHandler} onValid={onValidHandler}/>
+        else if (page === 3) return <Link onLinkData={onLinkDataHandler} onValid={onValidHandler} />
     }
     return ( 
         <section className="flex flex-col content-center">

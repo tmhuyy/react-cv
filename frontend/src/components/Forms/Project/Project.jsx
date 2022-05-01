@@ -1,4 +1,4 @@
-const Project = () => {
+const Project = (props) => {
     return ( 
         <>
             Project here

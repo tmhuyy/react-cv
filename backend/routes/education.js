@@ -3,7 +3,7 @@ const educationController = require("../controllers/educationController");
 const router = require("express").Router();
 
 // ADD USER
-router.post("/create-edu", educationController.addEducation);
+router.post("/", educationController.addEducation);
 
 // GET ALL EDUCATIONS
 router.get("/", educationController.getAllEducations);

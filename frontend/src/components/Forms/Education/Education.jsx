@@ -7,7 +7,7 @@ const Education = (props) => {
             degree: "",
             startDate: "",
             endDate: "",
-            details: ""
+            details: "",
         },
     ]);
     
@@ -25,7 +25,7 @@ const Education = (props) => {
                     degree: "",
                     startDate: "",
                     endDate: "",
-                    details: ""
+                    details: "",
                 }
             ]
         })
@@ -47,7 +47,7 @@ const Education = (props) => {
         <form className="mx-4" onSubmit={submitHandler}>
             {educations.map((education, index) => {
                 return (
-                    <>
+                    
                         <section key={index}>
                             <div className="mb-4">
                                 <label htmlFor="name" className="cursor-pointer">School Name</label>
@@ -79,7 +79,6 @@ const Education = (props) => {
                                 <button type="button" className="bg-red-400 px-2 py-1" onClick={() => removeHandler(index)}>REMOVE</button>
                             </div>   
                         </section>
-                    </>  
                 )
             })}
             <button type="submit" className="button mb-4">Send First</button>

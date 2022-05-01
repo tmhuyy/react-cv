@@ -89,12 +89,6 @@ const userSchema = new mongoose.Schema({
     careerObjective: {
         type: String,
     },
-    links: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Link"
-        }
-    ],
     educations: [
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -107,6 +101,13 @@ const userSchema = new mongoose.Schema({
             ref: "Project"
         }
     ],
+    links: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Link"
+        }
+    ],
+    
     skills: [
         {
             type: mongoose.Schema.Types.ObjectId,

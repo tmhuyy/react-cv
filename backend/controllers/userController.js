@@ -4,7 +4,13 @@ const userController = {
     // ADD USER
     addUser: async (req, res) => {
         try {
-            const newUser = new User(req.body);
+            const newUser = new User({
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                address: req.body.address,
+                phoneNumber: req.body.phoneNumber,
+                careerObjective: req.body.careerObjective
+            });
             const savedUser = await newUser.save();
             res.status(200).json(savedUser);
         } catch (err) {
