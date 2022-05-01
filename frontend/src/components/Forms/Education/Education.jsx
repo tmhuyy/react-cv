@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; 
 const Education = (props) => {
     const { onEducationData, onValid } = props;
     const [educations, setEducations] = useState([
@@ -36,7 +36,6 @@ const Education = (props) => {
             data.splice(index, 1);
             setEducations(data);
         }
-        
     }
     const submitHandler = (e) => {
         e.preventDefault();
@@ -61,12 +60,12 @@ const Education = (props) => {
                             </div>
                             <div className="mb-4">
                                 <label htmlFor="startDate" className="cursor-pointer">Start Date</label>
-                                <input type="text" id="startDate" name="startDate" className="input"
+                                <input type="month" id="startDate" name="startDate" className="input"
                                     value={education.startDate} onChange={(e) => inputChangeHandler(e, index)} required/>
                             </div>
                             <div className="mb-4">
                                 <label htmlFor="endDate" className="cursor-pointer">End Date</label>
-                                <input type="text" id="endDate" name="endDate" className="input"
+                                <input type="month" id="endDate" name="endDate" className="input"
                                     value={education.endDate} onChange={(e) => inputChangeHandler(e, index)} required/>
                             </div>
                             <div className="mb-4">
