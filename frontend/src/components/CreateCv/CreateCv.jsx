@@ -11,17 +11,7 @@ const CreateCv = () => {
     const [isFinish, setIsFinish] = useState(false);
     const [isValid, setIsValid] = useState();
     const formTitles = ["Personal Detail", "Education", "Project", "Skill", "Link"];
-    const [newUser, setNewUser] = useState({
-        firstName: "",
-        lastName: "",
-        address: "",
-        phoneNumber: "",
-        careerObjective: "",
-        educations: [],
-        projects: [],
-        skills: [],
-        links: []
-    })
+
     const [user, setUser] = useState({});
     const [educations, setEducations] = useState([]);
     const [projects, setProjects] = useState([]);
@@ -51,33 +41,34 @@ const CreateCv = () => {
     }
     const submitAllData = () => {
         const submitData = { ...user, educations, projects, skills, links };
-        setNewUser(submitData);
-        console.log(submitData);
+        console.log(submitData)
+        axios.post("/v1/users", submitData);
     }
-    console.log(newUser)
     const onValidHandler = (entered) => {
         setIsValid(entered)
     }
     const onUserDataHandler = (userData) => {
-        // axios.post("http://localhost:8080/v1/user", userData)
         setUser(userData);
         console.log(userData);
     }
     const onEducationDataHandler = (educationData) => {
-        // axios.post("http://localhost:8080/v1/education", educationData)
-        setEducations(educationData);
+        const data = [...educationData]
+        setEducations(data);
         console.log(educationData);
     }
     const onProjectDataHandler = (projectData) => {
-        setProjects(projectData);
+        const data = [...projectData]
+        setProjects(data);
         console.log(projectData);
     }
     const onSkillDataHandler = (skillData) => {
-        setSkills(skillData);
+        const data = [...skillData]
+        setSkills(data);
         console.log(skillData);
     }
     const onLinkDataHandler = (linkData) => {
-        setLinks(linkData);
+        const data = [...linkData]
+        setLinks(data);
         console.log(linkData);
     }
     const pageDisplay = () => {
@@ -102,7 +93,7 @@ const CreateCv = () => {
                 <div className="body">{ pageDisplay()}</div>
                 <button className="button disabled:opacity-50" onClick={prevHandler} disabled={page === 0 }>Prev</button>
                 {page === formTitles.length - 1  ?
-                    <button className="button" onClick={submitAllData}>Submit</button> :
+                    <button className="button" onClick={submitAllData}><a href="http://localhost:3000/cv-builder">Submit</a></button> :
                     <button className="button" onClick={nextHandler}>Next</button>
                 }
             </section>

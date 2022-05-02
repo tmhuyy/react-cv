@@ -8,7 +8,6 @@ dotenv.config();
 const app = express();
 
 const userRoute = require("./routes/user");
-const educationRoute = require("./routes/education");
 
 // CONNECT DATABASE
 mongoose.connect(process.env.MONGODB_URL)
@@ -20,8 +19,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json({limit: "50mb"}));
 
 // ROUTES
-app.use("/v1/user", userRoute);
-app.use("/v1/education", educationRoute);
+app.use("/v1/users", userRoute);
 
 app.listen(process.env.PORT, () => {
   console.log("SERVER IS RUNNING !!");

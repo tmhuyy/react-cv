@@ -1,30 +1,24 @@
-const { Link, Education, Project, Skill, User } = require("../model/model");
+const { User } = require("../model/model");
 
 const userController = {
-    // ADD USER
+
     addUser: async (req, res) => {
         try {
-            const newUser = new User({
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                address: req.body.address,
-                phoneNumber: req.body.phoneNumber,
-                careerObjective: req.body.careerObjective
-            });
+            const newUser = new User(req.body);
             const savedUser = await newUser.save();
             res.status(200).json(savedUser);
         } catch (err) {
-            res.status(500).json(err)
+            res.status(500).json(err);
         }
     },
-    // GET ALL USERS
-    getAllUsers: async (req, res) => {
+    getUser: async (req, res) => {
         try {
-            const users = await User.find().populate("educations");
-            res.status(200).json(users);
+            const newestUser = await User.find().sort({ _id: -1 });
+            res.status(200).json(newestUser);
         } catch (err) {
             res.status(500).json(err);
         }
     }
 }
+
 module.exports = userController;

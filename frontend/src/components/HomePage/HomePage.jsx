@@ -1,11 +1,12 @@
 import ContentLP from "../ContentLP/ContentLP";
 import Header from "../Header/Header";
 
-const HomePage = () => {
+const HomePage = (props) => {
+    const { allUsers } = props;
     return ( 
         <>
             <Header />
-            <ContentLP/>
+            <ContentLP allUsers={ allUsers }/>
         </>
      );
 }
