@@ -39,7 +39,7 @@ function App () {
   }, [windowSize]);
   useEffect(() => {
         async function getData() {
-            const res = await axios.get("/v1/users");
+            const res = await axios.get("https://react-cv-builder-v1.herokuapp.com/v1/users");
             return res;
         }
         getData().then(res => setAllUsers(res.data));
