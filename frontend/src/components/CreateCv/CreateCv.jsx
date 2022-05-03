@@ -79,22 +79,22 @@ const CreateCv = () => {
         else if (page === 4) return <Link onLinkData={onLinkDataHandler} onValid={onValidHandler} />
     }
     return ( 
-        <section className="flex flex-col content-center">
-            <h1 className="text-24 mt-8 text-center">Progress Bar</h1>
-            <div className="w-full h-[20px] mb-8 bg-slate-300 text-center">
+        <section className="flex flex-col">
+            <h1 className="mt-8 mb-4 font-extrabold text-[28px] text-center">Progress Bar</h1>
+            <div className="w-full h-[20px] mb-8 bg-slate-300 text-center md:w-[40%] md:m-auto border-solid border-[1px] border-black dark:border-none">
                 <div className="h-[100%] bg-pink-500 z-[-1]" style={{width: page === 0 ? "0" : page === 1 ? "25%" : page === 2 ? "50%" : page === 3 ? "75%": "100%"}}></div>
             </div>
-            <header className="mt-8 mb-4 font-extrabold text-36 text-center">Sign Up</header>
-            <section className="bg-gradient-to-b shadow-md from-white/40 rounded-[24px] to-transparent text-center">
+            <header className="mt-8 mb-4 font-extrabold text-[28px] text-center">Sign Up</header>
+            <section className="bg-gradient-to-b shadow-md from-white/40 rounded-[24px] to-transparent text-center md:w-[40%] md:m-auto">
                 <div className="mb-4">
-                    <h1>{formTitles[page]}</h1>
+                    <h1 className="md:text-[20px]">{formTitles[page]}</h1>
                     { isValid === false && <h2 className="text-13 text-red-600">Make sure every fields is set</h2>}
                 </div>
                 <div className="body">{ pageDisplay()}</div>
-                <button className="button disabled:opacity-50" onClick={prevHandler} disabled={page === 0 }>Prev</button>
+                <button className="button disabled:opacity-50 mr-4" onClick={prevHandler} disabled={page === 0 }>Prev</button>
                 {page === formTitles.length - 1  ?
-                    <button className="button" onClick={submitAllData}><a href="http://localhost:3000/cv-builder">Submit</a></button> :
-                    <button className="button" onClick={nextHandler}>Next</button>
+                    <button className="button mb-4" onClick={submitAllData}><a href="http://localhost:3000/cv-builder">Submit</a></button> :
+                    <button className="button mb-4" onClick={nextHandler}>Next</button>
                 }
             </section>
         </section>
