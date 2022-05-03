@@ -21,6 +21,6 @@ app.use(bodyParser.json({limit: "50mb"}));
 // ROUTES
 app.use("/v1/users", userRoute);
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log("SERVER IS RUNNING !!");
 });
