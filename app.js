@@ -10,7 +10,7 @@ const app = express();
 const userRoute = require("./routes/user");
 
 // CONNECT DATABASE
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect("mongodb+srv://minhhuy123:Minhhuy123@cluster0.yjopp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
   .then(() => console.log("CONNECTION IS OPEN"))
   .catch((err) => console.log(err))
   
