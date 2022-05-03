@@ -80,7 +80,7 @@ const CreateCv = () => {
     }
     return ( 
         <section className="flex flex-col content-center">
-            <h1 className="text-24 mt-8 text-center">Prgress Bar</h1>
+            <h1 className="text-24 mt-8 text-center">Progress Bar</h1>
             <div className="w-full h-[20px] mb-8 bg-slate-300 text-center">
                 <div className="h-[100%] bg-pink-500 z-[-1]" style={{width: page === 0 ? "0" : page === 1 ? "25%" : page === 2 ? "50%" : page === 3 ? "75%": "100%"}}></div>
             </div>
