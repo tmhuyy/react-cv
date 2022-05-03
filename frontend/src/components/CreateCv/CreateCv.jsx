@@ -93,7 +93,7 @@ const CreateCv = () => {
                 <div className="body">{ pageDisplay()}</div>
                 <button className="button disabled:opacity-50 mr-4" onClick={prevHandler} disabled={page === 0 }>Prev</button>
                 {page === formTitles.length - 1  ?
-                    <button className="button mb-4" onClick={submitAllData}><a href="http://localhost:3000/cv-builder">Submit</a></button> :
+                    <button className="button mb-4" onClick={submitAllData}><a href="https://react-cv-iota.vercel.app/cv-builder">Submit</a></button> :
                     <button className="button mb-4" onClick={nextHandler}>Next</button>
                 }
             </section>
