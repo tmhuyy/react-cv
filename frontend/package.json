@@ -47,6 +47,6 @@
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24"
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "https://react-cv.onrender.com"
 
 }
