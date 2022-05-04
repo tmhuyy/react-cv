@@ -42,7 +42,7 @@ const CreateCv = () => {
     const submitAllData = () => {
         const submitData = { ...user, educations, projects, skills, links };
         console.log(submitData)
-        axios.post("/v1/users", submitData);
+        axios.post("https://react-cv-builder-v1.herokuapp.com/v1/users", submitData);
     }
     const onValidHandler = (entered) => {
         setIsValid(entered)
