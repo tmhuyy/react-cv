@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { RiSunFoggyFill } from "react-icons/ri";
-import { SiSnowflake } from "react-icons/si";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import { RiMoonFoggyFill } from "react-icons/ri";
 import { useState } from "react";
@@ -54,17 +54,18 @@ const NavBar = (props) => {
             onClick={openMenuHandler}
           />
         ) : !isOpen && isMobile ? (
-          <SiSnowflake
+          <GiHamburgerMenu
             size="30px"
             className="cursor-pointer"
             onClick={openMenuHandler}
           />
         ) : (
           <>
-            <Link to="/" className="btn-hover dark:text-white text-dark">Home</Link>
-            <Link to="/create" className="btn-hover dark:text-white text-dark">Create CV</Link>
-            <Link to="/document" className="btn-hover dark:text-white text-dark">Document </Link>
-            <a href="https://github.com/tmhuyy/react-cv" className="btn-hover dark:text-white text-dark">Contact</a>
+            <Link to="/" className="btn-hover dark:text-white text-black">Home</Link>
+            <Link to="/create" className="btn-hover dark:text-white text-black">Create CV</Link>
+                <Link to="/document" className="btn-hover dark:text-white text-black">Document </Link>
+                <Link to="/cv-builder" className="btn-hover dark:text-white text-black">Your CV </Link>
+            <a href="https://github.com/tmhuyy/react-cv" className="btn-hover dark:text-white text-black">Contact</a>
                 
           </>
         )} 
@@ -75,6 +76,8 @@ const NavBar = (props) => {
             <Link to="/" className="cursor-pointer text-black" onClick={itemHandler}>Home</Link>
             <Link to="/create" className="cursor-pointer text-black" onClick={itemHandler}>Create CV</Link>
             <Link to="/document" className="cursor-pointer text-black" onClick={itemHandler}>Document</Link>
+            <Link to="/cv-builder" className="btn-hover text-black">Your CV </Link>
+
             <a href="https://github.com/tmhuyy/react-cv" className="cursor-pointer text-black" onClick={itemHandler}>Contact</a>
           </section>
         )}
