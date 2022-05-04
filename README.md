@@ -1,2 +1,2 @@
-# react-cv
+# CV BUILDER
 demo-by-Huy
