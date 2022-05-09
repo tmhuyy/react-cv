@@ -63,7 +63,7 @@ const NavBar = (props) => {
           <>
             <Link to="/" className="btn-hover dark:text-white text-black">Home</Link>
             <Link to="/create" className="btn-hover dark:text-white text-black">Create CV</Link>
-                <Link to="/document" className="btn-hover dark:text-white text-black">Document </Link>
+            <a href="https://github.com/tmhuyy/react-cv#readme" className="btn-hover dark:text-white text-black">Document</a>
                 <Link to="/cv-builder" className="btn-hover dark:text-white text-black">Your CV </Link>
             <a href="https://github.com/tmhuyy/react-cv" className="btn-hover dark:text-white text-black">Contact</a>
                 
@@ -75,7 +75,7 @@ const NavBar = (props) => {
           <section className="flex flex-col	items-center absolute right-8 bg-white p-8 z-1 text-13" onClick={itemHandler}>
             <Link to="/" className="cursor-pointer text-black" onClick={itemHandler}>Home</Link>
             <Link to="/create" className="cursor-pointer text-black" onClick={itemHandler}>Create CV</Link>
-            <Link to="/document" className="cursor-pointer text-black" onClick={itemHandler}>Document</Link>
+            <a href="https://github.com/tmhuyy/react-cv#readme" className="cursor-pointer text-black" onClick={itemHandler}>Document</a>
             <Link to="/cv-builder" className="btn-hover text-black">Your CV </Link>
 
             <a href="https://github.com/tmhuyy/react-cv" className="cursor-pointer text-black" onClick={itemHandler}>Contact</a>

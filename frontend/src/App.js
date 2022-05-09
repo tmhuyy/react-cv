@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./components/HomePage/HomePage";
 import CreateCv from "./components/CreateCv/CreateCv";
-import Document from "./components/Document/Document";
 import Register from "./components/Register/Register";
 import axios from "axios";
 
@@ -52,7 +51,6 @@ function App () {
             <Routes>
               <Route path="/" element={<HomePage allUsers={ allUsers }/>}></Route>
               <Route path="/create" element={<CreateCv />}></Route>
-              <Route path="/document" element={<Document />}></Route>
               <Route path="/cv-builder" element={<Register allUsers={ allUsers }/>}></Route>
             </Routes>
           </div>
