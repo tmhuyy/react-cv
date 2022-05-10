@@ -1,9 +1,5 @@
 # [CV BUILDER](https://react-cv-iota.vercel.app/)
-CV Builder is a web application for building personal résumè. This project aims to solving this problem in an organized way, and also helps user keep tracks past instance they created during their life-time (not likely they will but its good to know that sql is built for that).  .<br>
-**Tech stack:**
-- SQL Database Management for résumè creation and storage.
-- Front-end: React.js and Tailwind CSS.
-- Back-end: Node.js and MongoDB
+CV Builder is a web application for building personal résumè. This project aims to solving this problem in an organized way, and also helps user keep tracks past instance they created during their life-time (not likely they will but its good to know that sql is built for that).
 ## Installation
 - Install Node.js.
 - Clone repository.
@@ -47,6 +43,16 @@ CV Builder is a web application for building personal résumè. This project aim
 |<img src="frontend/src/assets/screenshot/renderCvMac.png" alt="cv mac" width="400"/> |
 |:---:|
 | **Cv for mac** |
+
+## Tech stacks
+### Front-end
+- React.js
+- Tailwind CSS
+### Back-end
+- Node.js (Express) 
+- MongoDB (Mongoose)
+#### SQL Database Management for résumè creation and storage.
+
 ## Contributing
 Vinh Bao Phuc - ITITIU20127  - **Leader**
 <br>
