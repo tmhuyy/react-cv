@@ -2,12 +2,8 @@
 CV Builder is a web application for building personal résumè. This project aims to solving this problem in an organized way, and also helps user keep tracks past instance they created during their life-time (not likely they will but its good to know that sql is built for that).  .<br>
 **Tech stack:**
 - SQL Database Management for résumè creation and storage.
-- Node.js for front-end and animation.
-- Mongoldb and Java for back-end.
-
-**Tech stack:**
-
-For Node.js.
+- Front-end: React.js and Tailwind CSS.
+- Back-end: Node.js and MongoDB
 ## Installation
 - Install Node.js.
 - Clone repository.
