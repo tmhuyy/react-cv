@@ -33,11 +33,14 @@ const Register = (props) => {
                                     <p className="text-[11px] font-bold md:text-[15px]">{`${moment(education.startDate).format("MMM YYYY")} - ${moment(education.endDate).format("MMM YYYY")}`}</p>
                                 </div>
                                 <p className="text-[11px] md:text-[15px]">{education.degree}</p>
-                                {details.map((detail, index) => {
-                                    return (
-                                        <p key={index }className="text-[11px] md:text-[15px]">{detail}</p>
-                                    )
-                                })} 
+                                <ul>
+                                    {details.map((detail, index) => {
+                                        return (
+                                            <li key={index} className="list-disc text-[11px] md:text-[15px]">{detail}</li>
+                                        )
+                                    })} 
+                                </ul>
+                                
                             </section>
                         )
                     })}
@@ -65,11 +68,14 @@ const Register = (props) => {
                                     <p className="text-[13px] font-bold md:text-[17px]">{ project.name}</p>
                                     <p className="text-[11px] font-bold md:text-[15px]">{`${moment(project.startDate).format("MMM YYYY")} - ${moment(project.endDate).format("MMM YYYY")}`}</p>
                                 </div>
-                                {details.map((detail, index) => {
-                                    return (
-                                        <p key={index} className={`text-[11px] ${ (details[details.length - 1] === detail) && 'mb-4'} md:text-[15px]`}>{ detail }</p>
-                                    )
-                                })}
+                                <ul>
+                                    {details.map((detail, index) => {
+                                        return (
+                                            <li key={index} className={`list-disc text-[11px] ${ (details[details.length - 1] === detail) && 'mb-4'} md:text-[15px]`}>{ detail }</li>
+                                        )
+                                    })}
+                                </ul>
+                               
                             </section>
                         )
                     })}      
