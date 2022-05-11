@@ -28,7 +28,7 @@ const Register = (props) => {
                         return (
                             <section key={index}>
                                 <div className="flex flex-row justify-between mb-2">
-                                    <p className="text-[11px] font-bold md:text-[15px]">{ education.name}</p>
+                                    <p className="text-[12px] font-bold md:text-[15px]">{ education.name}</p>
                                     <p className="text-[11px] font-bold md:text-[15px]">{`${moment(education.startDate).format("MMM YYYY")} - ${moment(education.endDate).format("MMM YYYY")}`}</p>
                                 </div>
                                 <p className="text-[11px] md:text-[15px]">{education.degree}</p>
@@ -44,7 +44,7 @@ const Register = (props) => {
                     <ul className="grid grid-cols-2">
                         {newestUser.skills.map((skill, index) => {
                             return (
-                                <li key={index} className="text-[11px] list-disc md:text-[15px]">{`${skill.name}: ${skill.details}`}</li>
+                                <li key={index} className="text-[12px] list-disc md:text-[15px]">{`${skill.name}: ${skill.details}`}</li>
                             )
                         })}
                     </ul>
@@ -56,7 +56,7 @@ const Register = (props) => {
                         return (
                             <section key={index}>
                                 <div className="flex flex-row justify-between">
-                                    <p className="text-[11px] font-bold md:text-[15px]">{ project.name}</p>
+                                    <p className="text-[12px] font-bold md:text-[15px]">{ project.name}</p>
                                     <p className="text-[11px] font-bold md:text-[15px]">{`${moment(project.startDate).format("MMM YYYY")} - ${moment(project.endDate).format("MMM YYYY")}`}</p>
                                 </div>
                                 <p className="text-[11px] mb-4 md:text-[15px]">{ project.details }</p>
