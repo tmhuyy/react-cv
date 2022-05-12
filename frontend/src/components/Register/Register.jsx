@@ -49,7 +49,7 @@ const Register = (props) => {
                 <div className="mb-8">
                     <h2 className="md:text-[20px]">SKILLS</h2>
                     <hr className="md:border-[1px] border-black dark:border-white"></hr>
-                    <ul className="grid grid-cols-2">
+                    <ul className="grid gap-2 grid-cols-2">
                         {newestUser.skills.map((skill, index) => {
                             return (
                                 <li key={index} className="text-[11px] list-disc md:text-[15px]">{`${skill.name}: ${skill.details}`}</li>
