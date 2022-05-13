@@ -13,7 +13,8 @@ CV Builder is a web application for building personal résumè. This project aim
     - Laptop: <code>MacBook Air M1 2020 (1440x821)</code>.
 - How To Use
     - After typing data from each field is **finished**, <code>Send First</code> button must be clicked.
-    - To render the user's cv, click <code>Submit</code> button
+    - To render the user's cv, click <code>Submit</code> button.
+    - To see your cv, click <code>Your CV</code> in menu bar.
 - **NOTE**: <code>Prev</code> button clears the user’s previous data. 
 ## Screenshots
 |<img src="frontend/src/assets/screenshot/mac.png" alt="MacBook screen" width="400"/> |
