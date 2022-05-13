@@ -88,7 +88,7 @@ const CreateCv = () => {
             <section className="bg-gradient-to-b shadow-md from-white/40 rounded-[24px] to-transparent text-center md:w-[40%] md:m-auto">
                 <div className="mb-4">
                     <h1 className="md:text-[20px]">{formTitles[page]}</h1>
-                    { isValid === false ? <h2 className="text-13 text-red-600">Make sure every fields is set</h2> : <h2 className="text-13 text-green-600">All fields is set</h2>}
+                    { isValid === false ? <h2 className="errorMsg">Make sure every fields is set</h2> : <h2 className="successMsg">All fields is set</h2>}
                 </div>
                 <div className="body">{ pageDisplay()}</div>
                 <button className="button disabled:opacity-50 mr-4" onClick={prevHandler} disabled={page === 0 }>Prev</button>
