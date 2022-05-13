@@ -1,8 +1,9 @@
 import { useFormik } from "formik";
+import { useState } from "react";
+import {BsFillCheckCircleFill} from "react-icons/bs"
 import * as Yup from "yup";
 const User = (props) => {
     const { onUserData, onValid } = props;
-    
     const formik = useFormik({
         initialValues: {
             firstName: "",
@@ -21,17 +22,18 @@ const User = (props) => {
         onSubmit: (values) => {
             onValid(true);
             onUserData(values);
-        }
+        },
     });
     return ( 
         <>
-            <form className="mx-4" onSubmit={ formik.handleSubmit }>
+            <form className={`mx-4`} onSubmit={ formik.handleSubmit }>
                 <div className="mb-4">
-                    <label htmlFor="firstName" className="cursor-pointer">First Name</label>
+                    <label htmlFor="firstName" className={`cursor-pointer`}>First Name</label>
                     <input type="text" name="firstName" id="firstName" className="input"
                         value={formik.values.firstName} placeholder="First Name"
                         onChange={formik.handleChange} />
                     <p className="errorMsg">{ formik.errors.firstName }</p>
+                    
                 </div>
                 <div className="mb-4">
                     <label htmlFor="lastName" className="cursor-pointer">Last Name</label>
@@ -63,7 +65,7 @@ const User = (props) => {
                         onChange={formik.handleChange} ></textarea>
                     <p className="errorMsg">{ formik.errors.careerObjective }</p>
                 </div>
-                <button type="submit" className="button mb-4">Send First</button>
+                <button type="submit" className={`button mb-4`}>Send First</button>
             </form>
         </>
         
