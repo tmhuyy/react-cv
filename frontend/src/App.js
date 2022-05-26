@@ -35,12 +35,17 @@ function App () {
     }
   }, [windowSize]);
   useEffect(() => {
-        async function getData() {
-            const res = await axios.get("https://react-cv-builder-v1.herokuapp.com/v1/users");
-            return res;
-        }
-        getData().then(res => setAllUsers(res.data));
-        getData().catch(err => console.log(err));
+    async function getData() {
+      try {
+        const res = await axios.get("https://react-cv-builder-v1.herokuapp.com/v1/users");
+        const data = await res.data;
+        setAllUsers(data);
+      }
+      catch (err) {
+        console.log(err);
+      }
+    }
+    getData();
   }, []);
 
   return (
