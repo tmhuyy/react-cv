@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"; 
+import { useState } from "react"; 
 const Education = (props) => {
     const { onEducationData, onValid } = props;
     const [educations, setEducations] = useState([

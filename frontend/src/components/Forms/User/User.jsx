@@ -1,6 +1,4 @@
 import { useFormik } from "formik";
-import { useState } from "react";
-import {BsFillCheckCircleFill} from "react-icons/bs"
 import * as Yup from "yup";
 const User = (props) => {
     const { onUserData, onValid } = props;

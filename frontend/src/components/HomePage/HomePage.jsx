@@ -6,7 +6,7 @@ const HomePage = (props) => {
     return ( 
         <>
             <Header />
-            <ContentLP allUsers={ allUsers }/>
+            <ContentLP allUsers={allUsers} />
         </>
      );
 }
